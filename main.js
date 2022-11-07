@@ -1,9 +1,10 @@
 import { readJSON } from '../fileController.js'
-import {htmlStatement} from './statement.js'
+import {statement} from './statement.js'
+// import {htmlStatement} from './statement.js'
 
 const invoices = readJSON('ch1/invoices.json')
 const plays = readJSON('ch1/plays.json')
 
 invoices.forEach(invoice => {
-  console.log(htmlStatement(invoice, plays))
+  console.log(statement(invoice, plays))
 })
