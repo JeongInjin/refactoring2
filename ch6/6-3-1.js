@@ -1,8 +1,9 @@
 const price = order => {
+  let basePrice = order.quantity * order.itemPrice;
+  let quantityDiscount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+  let shipping = Math.min(basePrice * 0.1, 100);
   return (
-    order.quantity * order.itemPrice -
-    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
-    Math.min(order.quantity * order.itemPrice * 0.1, 100)
+    basePrice - quantityDiscount + shipping
   )
 }
 
