@@ -19,4 +19,14 @@ const plays = readJSON('ch1/plays.json')
 ```
 
 ---
-
+- 테스트 추가 모카 + 카이
+  - yarn add mocha chai
+```js
+//import {describe, it} from 'mocha' //import 안해도되는듯
+//assert 나 expect 입맛대로..
+import {assert} from 'chai'
+import {expect} from 'chai'
+```
+```text
+yarn run start --exec "mocha ch4/province.test.js"
+```
