@@ -1,7 +1,14 @@
-const rating = aDriver => (aDriver.numberOfLateDeliveries > 5 ? 2 : 1)
+const gatherCustomerData = (out, aCustomer) => {
+    out.push(['name', aCustomer.name])
+    out.push(['location', aCustomer.location])
+}
+const reportLines = aCustomer => {
+    const lines = []
+    gatherCustomerData(lines, aCustomer)
+    return lines
+}
 
-const DriverA = { name: 'A', numberOfLateDeliveries: 10 }
-const DriverB = { name: 'B', numberOfLateDeliveries: 4 }
-
-console.log(DriverA.name, rating(DriverA))
-console.log(DriverB.name, rating(DriverB))
+const customerA = { name: 'roy', location: 'seoul' }
+const customerB = { name: 'jay', location: 'incheon' }
+console.log(reportLines(customerA))
+console.log(reportLines(customerB))
