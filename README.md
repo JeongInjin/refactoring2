@@ -5,9 +5,10 @@
 - nodemon 설치
   - yarn add nodemon
   - yarn run start ch1/main.js
-- test
-  - yarn test ch7/7-2.test.js
+- test 
   - yarn run start --exec "mocha ch4/province.test.js"
+  - package.json 에 추가 할경우 "test": "nodemon --exec 'mocha ${0}'"
+    - yarn test ch7/7-1-2.test.js
 ```
 //package.json 에서 nodemon 추가
   "scripts": {
