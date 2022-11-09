@@ -30,3 +30,6 @@ import {expect} from 'chai'
 ```text
 yarn run start --exec "mocha ch4/province.test.js"
 ```
+
+---
+- yarn add lodash 
