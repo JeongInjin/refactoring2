@@ -5,6 +5,9 @@
 - nodemon 설치
   - yarn add nodemon
   - yarn run start ch1/main.js
+- test
+  - yarn test ch7/7-2.test.js
+  - yarn run start --exec "mocha ch4/province.test.js"
 ```
 //package.json 에서 nodemon 추가
   "scripts": {
@@ -26,9 +29,6 @@ const plays = readJSON('ch1/plays.json')
 //assert 나 expect 입맛대로..
 import {assert} from 'chai'
 import {expect} from 'chai'
-```
-```text
-yarn run start --exec "mocha ch4/province.test.js"
 ```
 
 ---
